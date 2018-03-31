@@ -1,0 +1,63 @@
+
+
+*** https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Your_first_HTML_form1
+
+
+https://www.smashingmagazine.com/2011/11/extensive-guide-web-form-usability/
+
+<label for="name">
+  Name: <input type="text" id="name" name="user_name">
+</label>
+
+
+ <p>
+      <label for="pwd">
+        <span>Password: </span>
+        <strong><abbr title="required">*</abbr></strong>
+      </label>
+      <input type="password" id="pwd" name="password">
+    </p>
+
+
+
+<input type="email" id="email" name="email" multiple>
+<input type="url" id="url" name="url">
+
+<label for="myFruit">What's your favorite fruit?</label>
+<input type="text" name="myFruit" id="myFruit" list="mySuggestion">
+<datalist id="mySuggestion">
+  <option>Apple</option>
+  <option>Banana</option>
+</datalist>
+<input type="number" name="age" id="age" min="1" max="10" step="2">
+
+
+
+<label for="beans">How many beans can you eat?</label>
+<input type="range" name="beans" id="beans" min="0" max="500" step="10">
+<span class="beancount"></span>
+
+
+var beans = document.querySelector('#beans');
+var count = document.querySelector('.beancount');
+
+count.textContent = beans.value;
+
+beans.oninput = function() {
+  count.textContent = beans.value;
+}
+
+Pvm
+<input type="datetime-local" name="datetime" id="datetime">
+
+<label for="myDate">When are you available this summer?</label>
+<input type="date" name="myDate" min="2013-06-01" max="2013-08-31" id="myDate">
+<--! not in all browsers yet!
+
+<progress max="100" value="75">75/100</progress>
+
+<meter min="0" max="100" value="75" low="33" high="66" optimum="50">75</meter>
+
+
+
+
